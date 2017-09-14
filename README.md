@@ -10,7 +10,7 @@ Surprisingly, the network works decently well for any position less than 6 moves
 
 I used Keras with tensorflow for training. You will need to install Keras to be able to run the network to make predictions. I provide the weights so you don't have to train from scratch.
 
-I used the pycuber library for writing the code to train, which also needs to be installed. I used the [MagicCube] (https://github.com/davidwhogg/MagicCube) library for the cube simulation/visualization. I only found MagicCube after using pycuber, so you need to have both installed for now :
+I used the pycuber library for writing the code to train, which also needs to be installed. I used the [MagicCube](https://github.com/davidwhogg/MagicCube) library for the cube simulation/visualization. I only found MagicCube after using pycuber, so you need to have both installed for now :
 
 ```
 pip install pycuber 
