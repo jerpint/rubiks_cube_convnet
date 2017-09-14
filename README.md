@@ -16,17 +16,18 @@ I used the pycuber library for writing the code to train, which also needs to be
 pip install pycuber 
 ```
 
-For MagicCuber, I provide the .zip of their github repo I used at the time. I suggest using this one to avoid conflicts.
+For MagicCuber, I provide the .zip of their github repo I used at the time. I suggest using this one to avoid conflicts. I provide the training weights for my ConvNet. 
 
-I provide the training weights for my simulation. To run, clone this repository, then in the commandline
+To run and play with the cube/shuffle it yourself, clone this repository, then in the commandline
 
 ```
-python rubiks/MagicCube/code/cube_JP.py
+python rubiks_cube_convnet/MagicCube/code/cube_convnet_solver.py
 ```
+You can shuffle using the keyboard and have it solve your own cube. There is a hard-coded reset if you've gone too far and the network can't solve it. This simply retraces back the steps to the initial solved position.
 
-This should, in theory, work!
-
-For training of the cube, its all in the rubiks.ipynb file. 
+For training of the cube :
  
-
-
+```
+python rubiks_cube_convnet/train_cube.py
+```
+There is plenty of exploring to do! Bigger networks might be one solution, fancier networks would likely be more appropriate. I thought of reinforcement learning, but decided to use the simpler supervised-learning approach to begin.
