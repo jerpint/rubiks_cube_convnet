@@ -31,3 +31,6 @@ For training of the cube :
 python rubiks_cube_convnet/train_cube.py
 ```
 There is plenty of exploring to do! Bigger networks might be one solution, fancier networks would likely be more appropriate. I thought of reinforcement learning, but decided to use the simpler supervised-learning approach to begin.
+
+REMEMBER: The search-space for a properly mixed cube is HUGE (something like 4e19 iirc). The original thought was that a ConvNet might be able to solve such a space. I do think that a more sophisticated approach would be necessary to solve for 10+ moves.  Maybe an idea would be to 'introduce' the cube to known cube algorithms in the train set and let it learn to optimise based on those, such that it can learn to 'think ahead'. Also a reward system reinforcement approach could be a good idea.
+
