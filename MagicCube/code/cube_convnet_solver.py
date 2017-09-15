@@ -590,7 +590,7 @@ if __name__ == '__main__':
 
     max_moves  = 6
 
-    model = load_model('../../rubiks_model.h5')
+    model = load_model('rubiks_model.h5')
 
     try:
         N = int(sys.argv[1])
