@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import widgets
 from projection import Quaternion, project_points
-import pycuber as pc
+# import pycuber as pc
 """
 Sticker representation
 ----------------------
@@ -73,12 +73,16 @@ class Cube:
 
     # Define rotation angles and axes for the six sides of the cube
     x, y, z = np.eye(3)
-    rots = [Quaternion.from_v_theta(x, theta)
-            for theta in (np.pi / 2, -np.pi / 2)]
-    rots += [Quaternion.from_v_theta(y, theta)
-             for theta in (np.pi / 2, -np.pi / 2, np.pi, 2 * np.pi)]
+    rots =  []
+    angles_x = [np.pi/2, -np.pi/2]
 
-    # define face movements
+    for theta in angles_x:
+        rots +=[Quaternion.from_v_theta(x, theta)]
+    angles_y = [np.pi / 2, -np.pi / 2, np.pi, 2 * np.pi]
+
+    for theta in angles_y:
+        rots += [Quaternion.from_v_theta(y, theta)]
+
     facesdict = dict(F=z, B=-z,
                      R=x, L=-x,
                      U=y, D=-y)
